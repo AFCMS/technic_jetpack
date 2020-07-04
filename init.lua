@@ -15,15 +15,5 @@ armor:register_armor("technic_jetpack:jetpack", {
 	reciprocate_damage = true,
 	wear_represents = "technic_RE_charge",
 	on_refill = technic.refill_RE_charge,
-	on_destroy = function(player, index, stack)
-		local pos = player:get_pos()
-		if pos then
-			minetest.sound_play({
-				name = "mod_name_break_sound",
-				pos = pos,
-				gain = 0.5,
-			})
-		end
-	end,
 })
 end
